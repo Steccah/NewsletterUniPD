@@ -14,7 +14,7 @@ async function speedup(page){
 
 async function main(){
     //lancia puppeteer senza "grafica" e in incognito
-    const browser = await puppeteer.launch({headless: false, args: [`--incognito`]});
+    const browser = await puppeteer.launch({headless: true, args: [`--incognito`]});
     const pages = await browser.pages();
     const page = pages[0];
 
