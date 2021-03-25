@@ -26,6 +26,8 @@ async function main(){
 
     await page.$$eval("input[type='checkbox']", checks => checks.forEach(c => c.checked = false));
     await page.click('.btn-save');
+
+    await browser.close();
 }
 
 main();
